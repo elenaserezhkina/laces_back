@@ -1,3 +1,5 @@
+const mongoose = require("mongoose");
+
 // Shoe schema
 const shoeSchema = new mongoose.Schema({
   brand: {
@@ -13,3 +15,7 @@ const shoeSchema = new mongoose.Schema({
   //svg
   laceImg: Buffer,
 });
+
+const Shoe = mongoose.model("Shoe", shoeSchema);
+
+module.exports = Shoe;
