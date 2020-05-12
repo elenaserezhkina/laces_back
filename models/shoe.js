@@ -1,14 +1,15 @@
+// Shoe schema
 const shoeSchema = new mongoose.Schema({
-  modelName: {
+  brand: {
     type: String,
+    required: true,
   },
-  defaultPicture: {
-    type: Buffer,
-  },
-  shoeBody: {
-    type: Buffer,
-  },
-  laceVariant: {
-    type: Buffer,
-  },
+  colorVariants: [
+    new mongoose.Schema({
+      color: { type: String },
+      image: { type: Buffer },
+    }),
+  ],
+  //svg
+  laceImg: Buffer,
 });
