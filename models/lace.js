@@ -1,3 +1,5 @@
+const mongoose = require("mongoose");
+
 // Lace schema
 const laceSchema = new mogoose.Schema({
   name: {
@@ -7,3 +9,7 @@ const laceSchema = new mogoose.Schema({
   laceImg: Buffer,
   pattern: Buffer,
 });
+
+const Lace = mongoose.model("Lace", laceSchema);
+
+module.exports = Lace;
