@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 
 const shoeRoutes = require("./routes/shoe.routes");
+const colorRoutes = require("./routes/color.routes");
 const laceRoutes = require("./routes/lace.routes");
 
 // Connection for Mongoose
@@ -18,6 +19,7 @@ connect();
 
 app.use(express.json({ limit: "1mb" }));
 
+app.use("/color", colorRoutes);
 app.use("/laces", laceRoutes);
 app.use("/", shoeRoutes);
 
