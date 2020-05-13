@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // Lace schema
-const laceSchema = new mogoose.Schema({
+const laceSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
