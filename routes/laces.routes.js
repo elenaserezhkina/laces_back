@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const shoeController = require("../controllers/laces.controllers");
+const shoeController = require("../controllers/shoe.controllers");
 
 router.post("/", shoeController.createShoe);
 router.get("/", shoeController.getShoes);
