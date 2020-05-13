@@ -1,4 +1,4 @@
-const shoeService = require("../services/services.shoes");
+const shoeService = require("../services/shoe.services");
 
 const createShoe = async (req, res, next) => {
   console.log("req", req.body);
