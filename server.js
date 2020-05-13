@@ -4,12 +4,13 @@ const mongoose = require("mongoose");
 const app = express();
 
 const shoeRoutes = require("./routes/laces.routes");
+const shoeRoutes = require("./routes/shoe.routes");
 // Connection for Mongoose
 const connect = () => {
-    return mongoose.connect(process.env.MONGO_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    });
+  return mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 };
 
 connect();
