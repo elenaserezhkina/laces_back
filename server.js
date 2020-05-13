@@ -1,6 +1,8 @@
+require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+
 const shoeRoutes = require("./routes/laces.routes");
 // Connection for Mongoose
 const connect = () => {
@@ -20,3 +22,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`app is running on ${PORT}`);
 });
+module.exports = app;

@@ -1,6 +1,7 @@
 const ShoeSchema = require("../models/shoe.model");
 
 const createShoe = async (reqBody) => {
+  console.log(reqBody)
   const shoe = await ShoeSchema.create(reqBody);
   return shoe;
 };
