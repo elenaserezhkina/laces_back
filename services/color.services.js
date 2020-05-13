@@ -20,6 +20,7 @@ const getColorById = async (colorId) => {
 
 const deleteColorById = async (colorId) => {
   const color = await getColorById(colorId);
+  console.log(color);
   await color.remove();
   return color;
 };

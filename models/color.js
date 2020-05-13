@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // Color schema
-const colorSchema = new mogoose.Schema({
+const colorSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -10,6 +10,6 @@ const colorSchema = new mogoose.Schema({
   url: String,
 });
 
-const Color = mongoose.model("Color", colorSchema);
+const ColorSchema = mongoose.model("colors", colorSchema);
 
-module.exports = Color;
+module.exports = ColorSchema;

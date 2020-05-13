@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const mongoose = require("mongoose");
 const app = express();
 const shoeRoutes = require("./routes/shoe.routes");
@@ -15,7 +16,7 @@ connect();
 
 app.use(express.json());
 
-app.use("/", shoeRoutes);
+app.use("/shoes", shoeRoutes);
 app.use("/color", colorRoutes);
 
 const PORT = process.env.PORT || 3000;
