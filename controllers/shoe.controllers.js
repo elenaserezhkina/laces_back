@@ -5,6 +5,8 @@ const createShoe = async (req, res, next) => {
     try {
         const shoe = await shoeService.createShoe({
             brand: req.body.brand,
+            colorVariants: req.body.colorVariants,
+            laceImg: req.body.laceImg,
         });
         res.status(201).json({ result: shoe });
     } catch (err) {
