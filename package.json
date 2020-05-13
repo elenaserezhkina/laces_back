@@ -5,13 +5,15 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.13"
+    "jest": "^26.0.1",
+    "mongoose": "^5.9.13",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r dotenv/config server.js",
-    "develop": "nodemon server.js"
+    "develop": "nodemon server.js",
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
