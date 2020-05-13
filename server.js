@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
@@ -16,7 +16,7 @@ const connect = () => {
 
 connect();
 
-app.use(express.json());
+app.use(express.json({ limit: "1mb" }));
 
 app.use("/laces", laceRoutes);
 app.use("/", shoeRoutes);
@@ -24,6 +24,6 @@ app.use("/", shoeRoutes);
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`app is running on ${PORT}`);
+  console.log(`app is running on ${PORT}`);
 });
 module.exports = app;
