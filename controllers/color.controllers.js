@@ -1,4 +1,4 @@
-const colorService = require("../services/color.services");
+const colorService = require("../services/services.color");
 
 const createColor = async (req, res, next) => {
   try {
