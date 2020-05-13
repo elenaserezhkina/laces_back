@@ -6,8 +6,8 @@ const laceSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  laceImg: Buffer,
-  pattern: Buffer,
+  laceImg: String,
+  pattern: String,
 });
 
 const Lace = mongoose.model("Lace", laceSchema);

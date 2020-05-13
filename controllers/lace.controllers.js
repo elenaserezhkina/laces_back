@@ -5,6 +5,8 @@ const createLace = async (req, res, next) => {
   try {
     const lace = await laceService.createLace({
       name: req.body.name,
+      laceImg: req.body.img,
+      pattern: req.body.pattern,
     });
     res.status(200).json({ result: lace });
   } catch (err) {
