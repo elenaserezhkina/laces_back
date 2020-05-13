@@ -6,7 +6,7 @@ const colorSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  colorImg: Buffer,
+  colorImg: String,
   url: String,
 });
 
