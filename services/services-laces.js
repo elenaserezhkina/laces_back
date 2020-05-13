@@ -1,4 +1,4 @@
-const ShoeSchema = require("../models/shoe.model");
+const ShoeSchema = require("../models/shoe");
 
 const createShoe = async (reqBody) => {
   const shoe = await ShoeSchema.create(reqBody);
