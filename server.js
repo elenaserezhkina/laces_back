@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
+const cors = require("cors");
 
 const shoeRoutes = require("./routes/shoe.routes");
 const colorRoutes = require("./routes/color.routes");
@@ -17,6 +17,8 @@ const connect = () => {
 
 connect();
 
+const app = express();
+app.use(cors({ origin: "*" }));
 app.use(express.json({ limit: "1mb" }));
 
 app.use("/color", colorRoutes);
