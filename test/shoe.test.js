@@ -39,7 +39,7 @@ describe('shoe routes', () => {
     //     test('should return all the shoes ', async () => {
     //         const res = await request(app)
     //             .get('/')
-    //             .expect(201);
+    //             .expect(201);    8
 
     //         const dbShoe = await shoeSchema.findById(res.body.id);
     //         expect(dbShoe).toBeDefined();

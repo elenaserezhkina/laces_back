@@ -4,8 +4,12 @@
     "\\controllers",
     "\\models",
     "\\routes",
-    "\\services"
+    "\\services",
+    "\\test",
+    "\\test\\fixtures",
+    "\\utils",
+    "\\utils\\setupTestDB"
   ],
-  "SelectedNode": "\\models\\shoe.js",
+  "SelectedNode": "\\controllers\\laces.controllers.js",
   "PreviewInSolutionExplorer": false
 }
