@@ -1,12 +1,12 @@
 const shoeService = require("../services/services.shoes");
 
 const createShoe = async (req, res, next) => {
-  console.log("req", req.body);
+  console.log("test", req.body.brand);
   try {
     const shoe = await shoeService.createShoe({
-      title: req.body.title,
+      brand: req.body.brand,
     });
-    res.status(200).json({ result: shoe });
+    res.status(201).json({ result: shoe });
   } catch (err) {
     next(err);
   }
