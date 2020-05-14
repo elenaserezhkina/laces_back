@@ -1,17 +1,18 @@
 const shoeService = require("../services/services.shoes");
 
 const createShoe = async (req, res, next) => {
-    console.log("test", req.body.brand);
-    try {
-        const shoe = await shoeService.createShoe({
-            brand: req.body.brand,
-            colorVariants: req.body.colorVariants,
-            laceImg: req.body.laceImg,
-        });
-        res.status(201).json({ result: shoe });
-    } catch (err) {
-        next(err);
-    }
+  console.log("test", req.body.brand);
+  try {
+    const shoe = await shoeService.createShoe({
+      brand: req.body.brand,
+      colorVariants: req.body.colorVariants,
+      laceImg: req.body.laceImg,
+      isFavourite: req.body.isFavourite,
+    });
+    res.status(201).json({ result: shoe });
+  } catch (err) {
+    next(err);
+  }
 };
 
 const getShoes = async (req, res, next) => {

@@ -4,6 +4,7 @@ const createColor = async (req, res, next) => {
   try {
     const color = await colorService.createColor({
       name: req.body.name,
+      isFavourite: req.body.isFavourite,
       //colorImg: req.body.colorImg,
       //url: req.body.url,
     });
