@@ -5,7 +5,7 @@ const createColor = async (req, res, next) => {
     const color = await colorService.createColor({
       name: req.body.name,
       favorite: req.body.favorite,
-      //colorImg: req.body.colorImg,
+      file: req.body.file,
       //url: req.body.url,
     });
     res.status(200).json({ result: color });

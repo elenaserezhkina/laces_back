@@ -9,6 +9,7 @@ const colorSchema = new mongoose.Schema({
   colorImg: String,
   url: String,
   favorite: { type: Boolean, default: false },
+  file: String,
 });
 
 const ColorSchema = mongoose.model("colors", colorSchema);
