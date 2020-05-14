@@ -7,7 +7,7 @@ const createLace = async (req, res, next) => {
       name: req.body.name,
       laceImg: req.body.img,
       pattern: req.body.pattern,
-      isFavourite: req.body.isFavourite,
+      favorite: req.body.favorite,
     });
     res.status(200).json({ result: lace });
   } catch (err) {

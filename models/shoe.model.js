@@ -16,7 +16,7 @@ const shoeSchema = new mongoose.Schema({
   laceImg: {
     type: String,
   },
-  isFavourite: { type: Boolean, default: false },
+  favorite: { type: Boolean, default: false },
 });
 
 const Shoe = mongoose.model("Shoe", shoeSchema);

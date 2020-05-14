@@ -8,7 +8,7 @@ const colorSchema = new mongoose.Schema({
   },
   colorImg: String,
   url: String,
-  isFavourite: { type: Boolean, default: false },
+  favorite: { type: Boolean, default: false },
 });
 
 const ColorSchema = mongoose.model("colors", colorSchema);

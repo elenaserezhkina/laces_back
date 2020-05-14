@@ -8,7 +8,7 @@ const laceSchema = new mongoose.Schema({
   },
   laceImg: String,
   pattern: String,
-  isFavourite: { type: Boolean, default: false },
+  favorite: { type: Boolean, default: false },
 });
 
 const Lace = mongoose.model("Lace", laceSchema);

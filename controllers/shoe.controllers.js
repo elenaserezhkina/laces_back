@@ -7,7 +7,7 @@ const createShoe = async (req, res, next) => {
       brand: req.body.brand,
       colorVariants: req.body.colorVariants,
       laceImg: req.body.laceImg,
-      isFavourite: req.body.isFavourite,
+      favorite: req.body.favorite,
     });
     res.status(201).json({ result: shoe });
   } catch (err) {
